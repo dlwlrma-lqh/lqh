@@ -25,10 +25,12 @@
         }
         #sidebar img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 100%; /* 设置为100%让图片适应容器宽度 */
+            max-width: 150px; /* 设置最大宽度限制 */
+            height: 150px; /* 固定高度 */
+            object-fit: cover; /* 图片填充容器并保持比例 */
             display: block;
-            margin: 0 auto 20px;
+            margin: 0 auto 20px; /* 图片居中 */
         }
         #sidebar h2 {
             text-align: center;
@@ -91,7 +93,7 @@
 
     <!-- 侧边栏 -->
     <div id="sidebar">
-        <img src="https://github.com/dlwlrma-lqh/lqh/blob/main/img/8825cc5938f205027f2f4a489d8e5238.jpeg" alt="个人头像">
+        <img src="https://github.com/dlwlrma-lqh/lqh/blob/main/img/8825cc5938f205027f2f4a489d8e5238.jpeg" alt="">
         <h2>李倩红</h2>
         <p>后端开发者</p>
         <ul>
