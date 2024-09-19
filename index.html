@@ -18,7 +18,7 @@
             height: auto;
             display: block;
         }
-         /* 侧边栏样式 */
+        /* 侧边栏样式 */
         #sidebar {
             width: 250px;
             background-color: #f0f0f0;
@@ -26,14 +26,14 @@
             padding: 20px;
             height: 100vh;
             position: fixed;
-            left: 0;
+            left: -250px; /* 初始位置缩进 */
             top: 0;
             box-sizing: border-box;
-            transform: translateX(-250px); /* 初始位置缩进 */
             transition: transform 0.3s ease; /* 平滑过渡效果 */
         }
         #sidebar:hover {
-            transform: translateX(0); /* 鼠标悬停时恢复正常位置 */
+            transform: translateX(250px); /* 鼠标悬停时恢复正常位置 */
+            left: 0; /* 确保侧边栏移动到正确位置 */
         }
         #sidebar img {
             border-radius: 50%;
@@ -105,10 +105,9 @@
     <!-- 顶部图片 -->
     <img id="top-image" src="https://github.com/dlwlrma-lqh/lqh/blob/main/img/top_img1.jpeg?raw=true" alt="顶部图片">
 
-
     <!-- 侧边栏 -->
     <div id="sidebar">
-        <img src="https://github.com/dlwlrma-lqh/lqh/blob/main/img/111.jpg?row=true" alt="">
+        <img src="https://github.com/dlwlrma-lqh/lqh/blob/main/img/111.jpg?raw=true" alt="个人头像">
         <h2>李倩红</h2>
         <p>后端开发|实习软件开发工程师</p>
         <ul>
@@ -130,7 +129,6 @@
             <h2>关于我</h2>
             <p>大家好！我是一个热爱编程和技术的开发者，平时喜欢写博客分享学习心得和生活感悟。我的兴趣包括：</p>
             <ul>
-                
                 <li>后端编程</li>
                 <li>开源项目</li>
                 <li>人工智能与机器学习</li>
