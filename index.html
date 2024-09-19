@@ -11,9 +11,8 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
         }
-        /* 整体布局样式 */
+        /* 侧边栏样式 */
         #sidebar {
             width: 250px;
             background-color: #333;
@@ -44,3 +43,104 @@
         }
         #sidebar ul li a {
             color: #fff;
+            text-decoration: none;
+        }
+        #sidebar ul li a:hover {
+            color: #3498db;
+        }
+        /* 主体内容样式 */
+        #content {
+            margin-left: 270px; /* 给内容留出足够的左边距，避免侧边栏遮挡 */
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            color: #3498db;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 侧边栏 -->
+    <div id="sidebar">
+        <img src="https://via.placeholder.com/150" alt="个人头像">
+        <h2>我的名字</h2>
+        <p>前端开发者 | 技术爱好者</p>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于我</a></li>
+            <li><a href="#">博客文章</a></li>
+            <li><a href="#">联系我</a></li>
+        </ul>
+    </div>
+
+    <!-- 主体内容 -->
+    <div id="content">
+        <header>
+            <h1>欢迎来到我的个人博客</h1>
+            <p>记录生活与技术的点滴</p>
+        </header>
+
+        <section>
+            <h2>关于我</h2>
+            <p>大家好！我是一个热爱编程和技术的开发者，平时喜欢写博客分享学习心得和生活感悟。我的兴趣包括：</p>
+            <ul>
+                <li>前端开发</li>
+                <li>后端编程</li>
+                <li>开源项目</li>
+                <li>人工智能与机器学习</li>
+            </ul>
+            <p>希望通过这个博客能和大家一起成长、学习！</p>
+        </section>
+
+        <section>
+            <h2>最新文章</h2>
+            <p>1. <a href="#">如何在 GitHub 上构建个人博客</a></p>
+            <p>2. <a href="#">理解 JavaScript 的闭包与作用域</a></p>
+            <p>3. <a href="#">掌握 Git 的基本操作</a></p>
+        </section>
+
+        <section>
+            <h2>个人生活</h2>
+            <p>除了编程，我还喜欢摄影和旅行。以下是我最近的一些作品：</p>
+            <img src="https://via.placeholder.com/600x400" alt="示例图片">
+        </section>
+
+        <footer>
+            <p>关注我的社交媒体：</p>
+            <p>
+                <a href="#">微博</a> | <a href="#">知乎</a> | <a href="#">GitHub</a>
+            </p>
+            <p>版权所有 &copy; 2024</p>
+        </footer>
+    </div>
+
+</body>
+</html>
