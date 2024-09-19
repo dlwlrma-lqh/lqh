@@ -14,9 +14,7 @@
         }
         /* 顶部图片样式 */
         #top-image {
-            width: 100%;
-            height: auto;
-            display: block;
+            display: none; /* 隐藏实际的顶部图片 */
         }
         /* 侧边栏样式 */
         #sidebar {
@@ -69,13 +67,19 @@
             background-color: #f4f4f4;
         }
         header {
-            background-color: #e0e0e0; /* 改为浅灰色背景 */
-            color: #333; /* 文字颜色改为深灰色 */
-            padding: 10px 0;
+            background-image: url('https://github.com/dlwlrma-lqh/lqh/blob/main/img/top_img1.jpeg?raw=true'); /* 设置背景图片 */
+            background-size: cover; /* 背景图片覆盖整个区域 */
+            background-position: center; /* 背景图片居中 */
+            color: #fff; /* 文字颜色为白色 */
+            padding: 40px 0; /* 增加内边距，确保内容有足够空间 */
             text-align: center;
         }
-        h1 {
+        header h1 {
             margin: 0;
+            font-size: 2.5em; /* 调整标题字体大小 */
+        }
+        header p {
+            font-size: 1.2em; /* 调整副标题字体大小 */
         }
         section {
             background-color: #fff;
@@ -105,21 +109,21 @@
             top: 10px;
             background-color: #d0d0d0; /* 浅灰色背景 */
             color: #333; /* 文字颜色改为深灰色 */
-/*             color: white; */
             border: none;
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;
             z-index: 1000; /* 确保按钮在侧边栏之上 */
+            font-size: 16px; /* 调整字体大小 */
+        }
+        #menu-button:hover {
+            background-color: #b0b0b0; /* 悬停时的颜色 */
         }
     </style>
 </head>
 <body>
     <!-- 菜单按钮 -->
-    <button id="menu-button">|||</button>
-
-    <!-- 顶部图片 -->
-    <img id="top-image" src="https://github.com/dlwlrma-lqh/lqh/blob/main/img/top_img4.jpeg?raw=true" alt="顶部图片">
+    <button id="menu-button">菜单</button>
 
     <!-- 侧边栏 -->
     <div id="sidebar">
