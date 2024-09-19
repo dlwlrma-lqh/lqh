@@ -18,16 +18,22 @@
             height: auto;
             display: block;
         }
-        /* 侧边栏样式 */
+         /* 侧边栏样式 */
         #sidebar {
             width: 250px;
-            background-color: #f0f0f0; /* 改为浅灰色背景 */
-            color: #333; /* 文字改为深灰色 */
+            background-color: #f0f0f0;
+            color: #333;
             padding: 20px;
             height: 100vh;
             position: fixed;
             left: 0;
             top: 0;
+            box-sizing: border-box;
+            transform: translateX(-250px); /* 初始位置缩进 */
+            transition: transform 0.3s ease; /* 平滑过渡效果 */
+        }
+        #sidebar:hover {
+            transform: translateX(0); /* 鼠标悬停时恢复正常位置 */
         }
         #sidebar img {
             border-radius: 50%;
