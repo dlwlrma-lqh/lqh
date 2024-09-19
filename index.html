@@ -26,14 +26,13 @@
             padding: 20px;
             height: 100vh;
             position: fixed;
-            left: -250px; /* 初始位置缩进 */
+            left: -250px; /* 初始隐藏位置 */
             top: 0;
             box-sizing: border-box;
-            transition: transform 0.3s ease; /* 平滑过渡效果 */
+            transition: left 0.3s ease; /* 平滑过渡效果 */
         }
-        #sidebar:hover {
-            transform: translateX(250px); /* 鼠标悬停时恢复正常位置 */
-            left: 0; /* 确保侧边栏移动到正确位置 */
+        #sidebar.show {
+            left: 0; /* 显示侧边栏的位置 */
         }
         #sidebar img {
             border-radius: 50%;
@@ -99,9 +98,25 @@
             padding: 10px;
             margin-top: 20px;
         }
+        /* 菜单按钮样式 */
+        #menu-button {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1000; /* 确保按钮在侧边栏之上 */
+        }
     </style>
 </head>
 <body>
+    <!-- 菜单按钮 -->
+    <button id="menu-button">菜单</button>
+
     <!-- 顶部图片 -->
     <img id="top-image" src="https://github.com/dlwlrma-lqh/lqh/blob/main/img/top_img1.jpeg?raw=true" alt="顶部图片">
 
@@ -152,5 +167,15 @@
         </footer>
     </div>
 
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            if (sidebar.classList.contains('show')) {
+                sidebar.classList.remove('show');
+            } else {
+                sidebar.classList.add('show');
+            }
+        });
+    </script>
 </body>
 </html>
